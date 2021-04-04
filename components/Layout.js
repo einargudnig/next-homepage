@@ -1,97 +1,99 @@
-import React, { useState, useEffect } from 'react'
-import { Grid, Row, Col } from 'react-flexbox-grid'
-import { Sun, Moon } from 'react-feather'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
+import React, { useState, useEffect } from "react";
+import { Grid, Row, Col } from "react-flexbox-grid";
+import { Sun, Moon } from "react-feather";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
-import { currentDayName } from '../utils/dateUtils'
+import Social from "./Social";
 
-import BlackLivesMatter from './BlackLivesMatter'
+import { currentDayName } from "../utils/dateUtils";
 
 const menu = [
   {
-    path: '/',
-    name: '0. start',
+    path: "/",
+    number: "01. ",
+    name: "Start",
   },
   {
-    path: '/about',
-    name: '1. about',
+    path: "/about",
+    number: "02. ",
+    name: "About",
   },
   {
-    path: '/uses',
-    name: '2. uses',
+    path: "/uses",
+    number: "03. ",
+    name: "Uses",
   },
-]
-const SHORTCUTS = ['Digit0', 'Digit1', 'Digit2']
-const avatar = `https://images.weserv.nl/?url=https://unavatar.now.sh/twitter/telmo&w=150`
+];
+const SHORTCUTS = ["Digit1", "Digit2", "Digit3"];
 const SALUTS = [
-  'Hey you.',
-  'Welcome.',
-  'Howdy.',
-  'Ahoy!',
+  "Hey you.",
+  "Welcome.",
+  "Howdy.",
+  "Ahoy!",
   `What's up?`,
   `How's life?`,
-  '👋',
-  'Long time no see.',
-  'Yo!',
-  'Hiya!',
+  "👋",
+  "Long time no see.",
+  "Yo!",
+  "Hiya!",
   `G'day mate!`,
-  'Sup?'
-]
+  "Sup?",
+];
 
 function Layout({ children, isHomepage, secondaryPage }) {
-  const router = useRouter()
-  const onLoadTheme = typeof localStorage !== 'undefined' && localStorage.getItem('BLOG_THEME')
-  const [theme, setTheme] = useState(onLoadTheme)
-  const [mounted, setMounted] = useState(false)
-  const [salut] = useState(SALUTS[Math.floor(Math.random() * SALUTS.length)])
+  const router = useRouter();
+  const onLoadTheme =
+    typeof localStorage !== "undefined" && localStorage.getItem("BLOG_THEME");
+  const [theme, setTheme] = useState(onLoadTheme);
+  const [mounted, setMounted] = useState(false);
+  const [salut] = useState(SALUTS[Math.floor(Math.random() * SALUTS.length)]);
   const switchTheme = () => {
-    const setTo = theme === 'dark' ? 'light' : 'dark'
+    const setTo = theme === "dark" ? "light" : "dark";
 
-    setTheme(setTo)
-  }
+    setTheme(setTo);
+  };
 
   function triggerShortcut(e) {
     if (SHORTCUTS.includes(e.code)) {
       // Split code to get only the number
-      const code = e.code.split('t')[1]
+      const code = e.code.split("t")[1];
 
       // Get route from menu
-      const { path } = menu[code]
+      const { path } = menu[code];
 
-      router.push(path)
+      router.push(path);
     }
   }
 
   useEffect(() => {
-    document.addEventListener('keypress', triggerShortcut)
+    document.addEventListener("keypress", triggerShortcut);
 
-    if (onLoadTheme) return
+    if (onLoadTheme) return;
 
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      setTheme('dark')
+      setTheme("dark");
     }
-  }, [])
+  }, []);
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme)
+    document.documentElement.setAttribute("data-theme", theme);
 
-    localStorage.setItem('BLOG_THEME', theme)
+    localStorage.setItem("BLOG_THEME", theme);
 
-    setMounted(true)
-  }, [theme])
+    setMounted(true);
+  }, [theme]);
 
   const containerProps = {
-    ...isHomepage && { md: 12 },
-    ...!isHomepage && { md: 8, mdOffset: 2 },
-  }
+    ...(isHomepage && { md: 8, mdOffset: 2 }),
+    ...(!isHomepage && { md: 8, mdOffset: 2 }),
+  };
 
-  if (!mounted) return <div />
+  if (!mounted) return <div />;
 
   return (
     <>
-      <BlackLivesMatter />
-
+      {/* Navbar */}
       <div className="top-menu">
         <Row>
           <Col xs={10}>
@@ -99,40 +101,47 @@ function Layout({ children, isHomepage, secondaryPage }) {
               <li className="logo">
                 <Link href="/" as="/">
                   <a>
-                    <img src={avatar} />
+                    <span>&lt;Einar&gt;</span>
                   </a>
                 </Link>
               </li>
 
-              {menu.map(({ path, name }) => (
+              {menu.map(({ path, name, number }) => (
                 <li key={name}>
                   <Link href={path} as={path}>
-                    <a>{name}</a>
+                    <a>
+                      <span className="number">{number}</span>
+                      <span>{name}</span>
+                    </a>
                   </Link>
                 </li>
               ))}
             </ul>
           </Col>
 
-          <Col xs={2} style={{ textAlign: 'right' }}>
-            <button className="theme-switch-button" onClick={() => switchTheme()}>
-              {theme === 'dark' ? <Sun /> : <Moon />}
+          {/* Dark theme Button */}
+          <Col xs={2} style={{ textAlign: "right" }}>
+            <button
+              className="theme-switch-button"
+              onClick={() => switchTheme()}
+            >
+              {theme === "dark" ? <Sun /> : <Moon />}
             </button>
           </Col>
         </Row>
       </div>
+      {/* End of Navbar */}
 
       <Grid>
         <Row>
           <Col {...containerProps}>
             {!secondaryPage && (
-              <div style={{ textAlign: 'center' }}>
-                <h1 className="blog-title">
-                  {salut}
-                </h1>
+              <div style={{ textAlign: "center" }}>
+                <h1 className="blog-title">{salut}</h1>
 
                 <p className="entry-description">
-                  I write about code, design & life. — Telmo
+                  Collection of thoughts, wanderings, reflections & everything
+                  in between.
                 </p>
               </div>
             )}
@@ -145,8 +154,11 @@ function Layout({ children, isHomepage, secondaryPage }) {
                   <Col xs={6} />
 
                   <Col xs={6}>
-                    <button className="theme-switch-button-mobile" onClick={() => switchTheme()}>
-                      {theme === 'dark' ? (
+                    <button
+                      className="theme-switch-button-mobile"
+                      onClick={() => switchTheme()}
+                    >
+                      {theme === "dark" ? (
                         <>
                           <Sun /> Light
                         </>
@@ -165,11 +177,16 @@ function Layout({ children, isHomepage, secondaryPage }) {
       </Grid>
 
       <footer>
-        <div>No tracking. No ads. Happy {currentDayName()}!</div>
-        <div>&copy; {new Date().getFullYear()}</div>
+        <div className="footer-container">
+          <div>
+            <Social />
+          </div>
+          <div>Einar Guðni | Have a good {currentDayName()}!</div>
+          {/* <div>&copy; {new Date().getFullYear()}</div> */}
+        </div>
       </footer>
     </>
-  )
+  );
 }
 
-export default Layout
+export default Layout;

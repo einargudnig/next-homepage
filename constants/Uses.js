@@ -1,31 +1,80 @@
 export const USES = [
   {
-    title: 'Coding Software',
+    title: "Coding Software",
     stack: [
-      { name: 'Sublime Text 3', description: 'By far my favorite Text Editor', link: 'https://www.sublimetext.com/3' },
-      { name: 'Visual Studio Code', description: 'From time to time', link: 'https://code.visualstudio.com/' },
-      { name: 'Auy', description: `I've been using this theme for a few weeks now`, link: 'https://github.com/dempfi/ayu' },
-      { name: 'IBM Plex Mono', description: `I'm currently giving this font a try`, link: 'https://fonts.google.com/specimen/IBM+Plex+Mono' },
-      { name: 'iTerm2', description: 'Has been my terminal for many years now', link: 'https://iterm2.com/' },
-      { name: 'Firefox', description: 'Switching from Chrome', link: 'https://www.mozilla.org/en-US/firefox/new/' },
-      { name: 'Google Chrome', description: 'Still using it', link: 'https://www.google.com/chrome/' },
-    ]
+      {
+        name: "Visual Studio Code",
+        description: "Nothing shocking here",
+        link: "https://code.visualstudio.com/",
+      },
+      // {
+      //   name: "One Dark Pro",
+      //   description: "I regularly change themes in VS Code for fun ",
+      //   link:
+      //     "https://marketplace.visualstudio.com/items?itemName=adrianwilczynski.one-dark-pro",
+      // },
+      // {
+      //   name: "VS Code Icons",
+      //   description:
+      //     "I've been using the same Icon pack since I started using VS Code.",
+      //   link:
+      //     "https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons",
+      // },
+      {
+        name: "wsl2",
+        description: "Great development environment when you get it set up",
+        link: "https://docs.microsoft.com/en-us/windows/wsl/",
+      },
+      {
+        name: "zsh",
+        description:
+          "Recently started using this shell, like the customizability",
+        link: "https://ohmyz.sh/",
+      },
+      {
+        name: "Google Chrome",
+        description: "Good for developing and using all the RAM",
+        link: "https://www.google.com/chrome/",
+      },
+    ],
   },
   {
-    title: 'Gear',
+    title: "Gear",
     stack: [
-      { name: 'MacBook Pro 13″', description: '2.3 GHz Dual-Core Intel Core i5', link: 'https://www.apple.com/macbook-pro-13/' },
-      { name: 'Apple Magic Mouse', description: 'Although, I use the trackpad a lot', link: 'https://www.apple.com/shop/product/MRME2/magic-mouse-2-space-gray?fnode=4c' },
-      { name: 'LG Led Monitor', description: 'I use 2 of these. 1 Horizontally, 1 Vertically', link: 'https://www.lg.com/levant_en/monitors/lg-24MP48HQ-P' },
-      { name: 'AirPods 2nd Gen', description: 'Thinking about changing these actually', link: 'https://www.apple.com/airpods-2nd-generation/' },
-    ]
+      {
+        name: "Asus Zenbook Deluxe 3",
+        description: "1.8 GHz Quad-Core Intel Core i7. 16gb RAM",
+        link:
+          "https://www.asus.com/us/laptops/for-home/zenbook/asus-zenbook-3-deluxe-ux490/",
+      },
+      {
+        name: "Logitech Mx Master 3",
+        description: "Very comfortable and great to use.",
+        link: "https://www.logitech.com/en-us/products/mice/mx-master-3.html",
+      },
+      {
+        name: "Keychron K4 v2",
+        description: "My first Mechenical keyboard. Gateron brown switches",
+        link:
+          "https://www.keychron.com/products/keychron-k4-wireless-mechanical-keyboard-version-2",
+      },
+      {
+        name: `24" Dell Monitor`,
+        description: `I use a 24" Dell monitor at work.`,
+        link:
+          "https://www.dell.com/en-us/shop/dell-24-monitor-s2421hs/apd/210-axhh/monitors-monitor-accessories",
+      },
+      {
+        name: `Asus 24,5" FHD Monitor`,
+        description: "I use this one at home.",
+        link:
+          "https://www.asus.com/Displays-Desktops/Monitors/All-series/VG255H/",
+      },
+      {
+        name: "Sony WH-1000",
+        description: "Probably my most used item over the last 4 years.",
+        link: "https://www.sony.com/electronics/headband-headphones/wh-1000xm3",
+      },
+    ],
   },
-  {
-    title: 'Twitter Tips',
-    stack: [
-      { name: 'Kap', description: 'To record my screen', link: 'http://getkap.co/' },
-      { name: 'Sublime Text 3', description: 'I use ST3 with a few custom configurations', link: 'https://www.sublimetext.com/3' },
-      { name: 'Keycastr', description: 'To log key bindings', link: 'https://github.com/keycastr/keycastr' },
-    ]
-  },
-]
+];

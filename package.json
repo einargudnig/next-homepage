@@ -27,7 +27,13 @@
     "react-scroll-progress-bar": "^1.1.12",
     "react-syntax-highlighter": "^12.2.1",
     "react-text-transition": "^1.0.2",
+    "react-transition-group": "^4.4.1",
     "reading-time": "^1.2.0",
-    "simple-icons": "^2.9.0"
+    "scrollreveal": "^4.0.9",
+    "simple-icons": "^2.9.0",
+    "styled-components": "^5.2.3"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.12.0"
   }
 }

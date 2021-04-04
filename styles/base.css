@@ -2,22 +2,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
 
 :root {
-  --primary-color: #0070f4;
-  --secondary-color: #09ded8;
+  --primary-color: #1e90ff;
+  --secondary-color: #1e90ff;
   --dark-grey: #666;
-  --text-color: #000;
-  --background-color: #fff;
+  --text-color-main: #000000;
+  --text-color-secondary: #676767;
+  --background-color: #FFFFEE;
+  --background-color-secondary: #d3d3d3;
   --hr-color: #ddd;
   --article-text-color: #444;
   --uses-secondary-color: #bbb;
+
+  --fz-xxs: 12px;
+  --fz-xs: 13px;
+  --fz-sm: 14px;
+  --fz-md: 16px;
+  --fz-lg: 18px;
+  --fz-xl: 20px;
+  --fz-xxl: 22px;
+  --fz-heading: 32px;
+  
+  --border-radius: 4px;
+  --nav-height: 100px;
+  --nav-scroll-height: 70px;
+  --tab-height: 42px;
+  --tab-width: 120px;
+
+  --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 [data-theme="dark"] {
-  /* --primary-color: #0070f4;
-  --secondary-color: #09ded8; */
+  --primary-color: #FFFF66;
+  --secondary-color: #FFFF66;
   --dark-grey: #666;
-  --text-color: #fff;
-  --background-color: #010101;
+  --text-color-main: #C0C0C0;
+  --text-color-secondary: #C8C8C8;
+  --background-color: #1F2023;
+  --background-color-secondary: #2D2F34;
   --hr-color: #333;
   --article-text-color: #eee;
   /* --uses-secondary-color: #bbb; */
@@ -29,12 +51,13 @@
 }
 
 html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Calibre', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+    /*font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace; */
 }
 
 body {
   background-color: var(--background-color);
-  color: var(--text-color);
+  color: var(--text-color-main);
   margin: 0;
 }
 
@@ -54,19 +77,21 @@ body {
 .top-menu ul li {
   display: inline-block;
   margin-right: 1px;
+  color: var(--text-color-main);
 }
 
 .top-menu ul li.logo a {
   font-size: 20px;
   display: inline-block;
   vertical-align: middle;
+  color: var(--text-color-main);
 }
 
-.top-menu ul li.logo img {
+.top-menu ul li.logo span {
   width: 40px;
   border-radius: 250px;
   padding: 3px;
-  border: 3px var(--primary-color) solid;
+  /* border: 3px var(--primary-color) solid; */
   transition: all .1s linear;
 }
 
@@ -79,21 +104,25 @@ body {
 }
 
 .top-menu ul li a {
-  color: var(--text-color);
+  color: var(--text-color-main);
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
   text-decoration: none;
   font-size: 13px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   padding: 4px 10px 6px;
   border-radius: 5px;
   letter-spacing: -.5px;
   font-weight: 500;
-  font-family: ibm-plex-mono, Monaco, 'Lucida Console';
   transition: all .2s linear;
 }
 
 .top-menu ul li a:hover {
-  background: var(--primary-color);
-  color: var(--background-color);
+  /* background: var(--primary-color); */
+  color: var(--primary-color);
+}
+
+.top-menu ul li a .number span {
+  color: var(--primary-color)
 }
 
 .theme-switch-button {
@@ -101,7 +130,7 @@ body {
   background: none;
   cursor: pointer;
   cursor: hand;
-  color: var(--text-color);
+  color: var(--text-color-main);
   outline: 0;
   margin-top: 5px;
   position: fixed;
@@ -110,7 +139,7 @@ body {
 }
 
 .theme-switch-button svg {
-  fill: var(--text-color);
+  fill: var(--text-color-main);
 }
 
 .amp {
@@ -120,7 +149,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: var(--text-color);
+  color: var(--text-color-main);
   font-weight: 800;
 }
 
@@ -138,7 +167,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .entry-description {
-  font-family: Kalam;
+  font-family:  'Calibre', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
   margin-bottom: 50px;
   font-size: 22px;
   color: var(--dark-grey);
@@ -154,7 +183,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .writing-row a {
-  color: var(--text-color);
+  color: var(--text-color-main);
   display: block;
   transition: all .2s;
   text-decoration: none;
@@ -167,7 +196,7 @@ h1, h2, h3, h4, h5, h6 {
 .writing-row .writing-date {
   padding-right: 20px;
   font-size: 14px;
-  color: var(--uses-secondary-color);
+  color: var(--text-color-secondary);
 }
 
 .writing-row .writing-title {
@@ -181,7 +210,19 @@ h1, h2, h3, h4, h5, h6 {
   font-size: calc(4vw + 4vh);
   letter-spacing: -.2rem;
   margin: 50px 0 30px;
-  background: linear-gradient(45deg, var(--primary-color) 32.5%, var(--secondary-color) 50.5%);
+  background: var(--primary-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1em;
+  padding-bottom: 20px;
+}
+
+.main-h2 {
+  font-weight: 600;
+  font-size: calc(4vw + 4vh);
+  letter-spacing: -.2rem;
+  margin: 50px 0 30px;
+  background: var(--primary-color);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1em;
@@ -194,6 +235,7 @@ h1, h2, h3, h4, h5, h6 {
 .writing-container h4,
 .writing-container h5,
 .writing-container h6 {
+  color: var(--text-color-main);
   letter-spacing: -1px;
 }
 
@@ -238,7 +280,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .writing-container *:not(pre) > code {
   font-family: ibm-plex-mono, Monaco, 'Lucida Console';
-  border: 1px var(--primary-color) dashed;
   color: var(--primary-color);
   padding: 4px 7px 7px;
   border-radius: 4px;
@@ -261,7 +302,7 @@ hr:before {
 }
 
 .writing-container a {
-  color: var(--text-color);
+  color: var(--text-color-main);
   text-decoration: underline;
   text-decoration-color: var(--primary-color);
   text-decoration-thickness: 4px;
@@ -304,15 +345,23 @@ hr:before {
 }
 
 .copy-to-clipboard button:hover {
-  color: var(--text-color);
+  color: var(--text-color-main);
 }
 
 footer {
   text-align: center;
   font-size: 13px;
-  padding: 100px 0;
+  padding: 30px 0;
   color: var(--dark-grey);
   line-height: 2em;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  @media (max-width: 960px) {
+    flex-direction: column;
+  }
 }
 
 .author {
@@ -320,7 +369,7 @@ footer {
 }
 
 .author a {
-  color: var(--text-color);
+  color: var(--primary-color);
   text-decoration: none;
   font-weight: 500;
   font-size: 15px;
@@ -339,7 +388,7 @@ footer {
 }
 
 .hope-liked {
-  font-family: Kalam;
+  font-family: 'Calibre', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
   font-size: 21px;
   line-height: 1.9em;
   margin-top: 80px;
@@ -353,20 +402,20 @@ footer {
 }
 
 .uses-intro a, .about-intro a {
-  color: var(--text-color);
+  color: var(--primary-color);
   text-decoration: none;
-  border-bottom: 1px var(--text-color) dashed;
 }
 
 .about-intro h3 {
   font-weight: 700;
 }
 
+
 .uses-list {
   list-style: none;
   margin: 40px 0 80px;
   padding: 0;
-  font-family: ibm-plex-mono, Monaco, 'Lucida Console';
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
   font-size: 16px;
 }
 
@@ -394,7 +443,7 @@ footer {
 }
 
 .uses-list li:not(.head) a {
-  color: var(--text-color);
+  color: var(--text-color-main);
   font-weight: 600;
   text-decoration: none;
   margin-right: 15px;
@@ -402,19 +451,19 @@ footer {
 }
 
 .uses-list li:not(.head) a:hover {
-  border-bottom: 1px var(--text-color) dashed;
+  color: var(--primary-color)
 }
 
 [data-icon="Next.js"] svg,
 [data-icon="Zeit"] svg,
 [data-icon="CoffeeScript"] svg {
-  fill: var(--text-color);
+  fill: var(--text-color-main);
 }
 
 .stack-name {
-  font-family: ibm-plex-mono, Monaco, 'Lucida Console';
+  font-family: 'Calibre', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
   font-size: 13px;
-  color: var(--text-color);
+  color: var(--text-color-main);
 }
 
 /* Override scroll progress */
@@ -477,9 +526,9 @@ footer {
     background: none;
     cursor: pointer;
     cursor: hand;
-    color: var(--text-color);
+    color: var(--text-color-main);
     outline: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Calibre', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
     font-size: 16px;
     font-weight: 500;
   }
@@ -489,9 +538,9 @@ footer {
     background: none;
     cursor: pointer;
     cursor: hand;
-    color: var(--text-color);
+    color: var(--text-color-main);
     outline: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Calibre', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
     font-size: 16px;
     font-weight: 500;
   }
@@ -557,16 +606,6 @@ footer {
     display: none;
   }
 
-  .support-blm span {
-    display: block;
-    line-height: 1.9em;
-  }
-
-  .support-blm span:after, .support-blm span:before {
-    height: 90px !important;
-    top: -1em !important;
-  }
-
   .main-h1 {
     font-size: calc(6vw + 6vh);
   }
@@ -580,43 +619,6 @@ footer {
   }
 }
 
-.pr-reviews-img {
-  width: 50%;
-  display: block;
-  margin: 50px auto;
-  border: 1px var(--dark-grey) solid;
-  padding: 30px 15px;
-  border-radius: 5px;
-}
-
-.reviews-list {
-  list-style: none;
-  padding: 0;
-  font-family: ibm-plex-mono, Monaco, 'Lucida Console';
-  font-size: 16px;
-}
-
-.reviews-list li {
-  padding: 5px 0 25px;
-}
-
-.reviews-list a, .reviews-list .point {
-  color: var(--text-color);
-  font-weight: 600;
-  margin-right: 10px;
-  text-decoration: none;
-  display: block;
-}
-
-.reviews-what-to-do {
-  font-family: ibm-plex-mono, Monaco, 'Lucida Console';
-  font-weight: 600;
-  font-size: 32px;
-  margin-bottom: 20px;
-  color: var(--primary-color);
-  display: inline-block;
-}
-
 .happy-coding {
   margin-top: 50px;
 }
@@ -626,12 +628,12 @@ footer {
 }
 
 .happy-coding span:first-child {
-  font-family: ibm-plex-mono, Monaco, 'Lucida Console';
+  font-family: 'Calibre', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
   font-weight: 600;
 }
 
 .happy-coding span:last-child {
-  font-family: Kalam;
+  font-family: 'Calibre', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
   font-size: 30px;
   margin-top: 20px;
 }
@@ -645,22 +647,4 @@ footer {
 .reading-time svg {
   vertical-align: middle;
   margin: -2px 5px 0 0;
-}
-
-.support-blm {
-  margin: 30px 25px 25px;
-  text-align: center;
-}
-
-.support-blm span {
-  padding: 4px 15px 6px;
-  border-radius: 4px;
-  font-family: Kalam;
-  letter-spacing: -.5px;
-  font-size: 18px;
-  color: var(--text-color);
-}
-
-.support-blm a {
-  color: var(--primary-color);
 }

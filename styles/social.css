@@ -1,0 +1,32 @@
+
+.social-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.social-list::after {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.social-list li a {
+    padding: 10px;
+}
+
+.social-list svg {
+    color:var(--dark-grey);
+    width: 20px;
+    height: 20px;
+}
+
+.social-list svg:hover {
+    color: var(--primary-color);
+}
