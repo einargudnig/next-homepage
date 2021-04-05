@@ -137,7 +137,11 @@ function Layout({ children, isHomepage, secondaryPage }) {
           <Col {...containerProps}>
             {!secondaryPage && (
               <div style={{ textAlign: "center" }}>
-                <h1 className="blog-title">{salut}</h1>
+                {/* <h1 className="blog-title">{salut}</h1> */}
+                <h1 className="blog-title">
+                  <span className="blog-title-text">Hello!</span>
+                  <span className="blog-title-emoji">👋</span>
+                </h1>
 
                 <p className="entry-description">
                   Collection of thoughts, wanderings, reflections & everything

@@ -1,47 +1,33 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
-// import { GA_TRACKING_ID } from '../lib/gtag'
+class MyDocument extends Document {
+  static async getInitialProps(ctx) {
+    const initialProps = await Document.getInitialProps(ctx);
+    return { ...initialProps };
+  }
 
-export default class MyDocument extends Document {
   render() {
+    const GA_MEASUREMENT_ID = "G-95HPC8T3GB"; // Paste your GTAG here
     return (
-      <Html>
+      <Html lang="en">
         <Head>
-          {/* Global Site Tag (gtag.js) - Google Analytics */}
-          {/* <script
+          <script
             async
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           />
           <script
+            // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{
               __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_TRACKIN G_ID}', {
-              page_path: window.location.pathname,
-            });
-          `,
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_MEASUREMENT_ID}', {
+                  page_path: window.location.pathname,
+                });
+              `,
             }}
-          /> */}
-
-          {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
-          {/* <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-95HPC8T3GB"
-          ></script>
-          <scrpt
-            dangerouslySetInnerHTML={{
-              __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-95HPC8T3GB', {
-                page_path: window.location.pathname,
-              });
-            `,
-            }}
-          /> */}
+          />
         </Head>
         <body>
           <Main />
@@ -51,3 +37,5 @@ export default class MyDocument extends Document {
     );
   }
 }
+
+export default MyDocument;

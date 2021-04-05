@@ -7,19 +7,20 @@ export const USES = [
         description: "Nothing shocking here",
         link: "https://code.visualstudio.com/",
       },
-      // {
-      //   name: "One Dark Pro",
-      //   description: "I regularly change themes in VS Code for fun ",
-      //   link:
-      //     "https://marketplace.visualstudio.com/items?itemName=adrianwilczynski.one-dark-pro",
-      // },
-      // {
-      //   name: "VS Code Icons",
-      //   description:
-      //     "I've been using the same Icon pack since I started using VS Code.",
-      //   link:
-      //     "https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons",
-      // },
+      {
+        name: "One Dark Pro",
+        description:
+          "I regularly change themes in VS Code for fun, this is my current theme.",
+        link:
+          "https://marketplace.visualstudio.com/items?itemName=adrianwilczynski.one-dark-pro",
+      },
+      {
+        name: "VS Code Icons",
+        description:
+          "I've been using the same Icon pack since I started using VS Code.",
+        link:
+          "https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons",
+      },
       {
         name: "wsl2",
         description: "Great development environment when you get it set up",

@@ -1,7 +1,7 @@
 {
-  "name": "telmo",
+  "name": "einar",
   "version": "1.0.0",
-  "description": "A tale of code & design",
+  "description": "A tale of interesting journey",
   "main": "index.js",
   "scripts": {
     "dev": "next",
@@ -9,7 +9,7 @@
     "start": "next start",
     "build:static": "next build && next export"
   },
-  "author": "Telmo Goncalves <@telmo>",
+  "author": "Einar Guðni <@einargudni>",
   "license": "ISC",
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
