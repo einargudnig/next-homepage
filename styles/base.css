@@ -166,7 +166,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .blog-title-text {
-  /* background: linear-gradient(45deg, var(--primary-color) 32.5%, var(--secondary-color) 50.5%); */
   color: var(--primary-color);
 }
 
@@ -234,9 +233,8 @@ h1, h2, h3, h4, h5, h6 {
   font-size: calc(4vw + 4vh);
   letter-spacing: -.2rem;
   margin: 50px 0 30px;
-  background: var(--primary-color);
+  color: var(--primary-color);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   line-height: 1em;
   padding-bottom: 20px;
 }
