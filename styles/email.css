@@ -1,0 +1,40 @@
+
+.email-container {
+    display: flex;
+    justify-content: start;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    display: block;
+    text-align: center;
+    transform: rotate(90deg);
+}
+
+.email-bar {
+    justify-content: start;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}
+
+.email-bar ::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 90px;
+    background-color: blueviolet;
+    transform: rotate(90deg);
+}
+
+.email {
+    justify-content: start;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}

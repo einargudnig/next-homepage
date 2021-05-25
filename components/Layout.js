@@ -4,6 +4,7 @@ import { Sun, Moon } from "react-feather";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
+import Email from "./Email";
 import Social from "./Social";
 
 import { currentDayName } from "../utils/dateUtils";
@@ -133,6 +134,7 @@ function Layout({ children, isHomepage, secondaryPage }) {
       {/* End of Navbar */}
 
       <Grid>
+        {/* <Email /> */}
         <Row>
           <Col {...containerProps}>
             {!secondaryPage && (
