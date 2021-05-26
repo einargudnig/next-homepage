@@ -1,8 +1,19 @@
 import Head from "next/head";
+import { IntlProvider } from "react-intl";
+import { useRouter } from "next/router";
 
 import "../styles/base.css";
 
+const languages = {
+  en: require("../locale/en.json"),
+  is: require("../locale/is.json"),
+};
+
 function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+  const { locale, defaulLocale } = router;
+  const messages = languages[locale];
+
   const og = pageProps.data?.og;
   const title = pageProps.data?.title;
 
@@ -43,7 +54,13 @@ function MyApp({ Component, pageProps }) {
         <title>{title || `Einar Guðni | Hi! 👋`}</title>
       </Head>
 
-      <Component {...pageProps} />
+      <IntlProvider
+        messages={messages}
+        locale={locale}
+        defaultLocale={defaulLocale}
+      >
+        <Component {...pageProps} />
+      </IntlProvider>
     </>
   );
 }
