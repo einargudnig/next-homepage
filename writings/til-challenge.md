@@ -1,5 +1,5 @@
 ---
-title: "30-day blog post flood."
+title: "30-day blog post flood"
 date: "2021-05-31"
 og:
   description: "Short blog post talking about my 30-day TIL posts"
