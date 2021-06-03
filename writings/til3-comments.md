@@ -1,0 +1,23 @@
+---
+title: "TIL#3 - Git comments"
+date: "2021-06-03"
+og:
+  description: "Conventional Comments for Git"
+  image: ""
+author:
+  twitter: "einargudni"
+  name: "Einar Guðni"
+---
+
+It can always be quite frusterating and hard to generate a well sounding git messages. It depends on what you are commiting, but the commit can take a turn to the bad side.
+
+![](<[https://res.cloudinary.com/dik9usnqz/image/upload/v1622500611/gitcomment.png](https://res.cloudinary.com/dik9usnqz/image/upload/v1622500611/gitcomment.png)>)
+More [here](http://www.commitlogsfromlastnight.com/)
+
+Don't take me wrong, this is fun and sometimes you just 'went' through your commit messages.
+
+But that is not very describing. [Here](https://www.conventionalcommits.org/en/v1.0.0-beta.2/) is a way that does describe what kind of commit this is by using these pre-determined words: "fix", "chore", "wip", etc.
+
+This can be helpful for collaboration work and easily recognizable.
+
+In my opinion this is one of those thing that you don't have to do, but you will get better from it. You can improve your git knowledge and workflows. Tomorrow I will tell you about a git command that can also work well, especially with these kind of commit messages.
