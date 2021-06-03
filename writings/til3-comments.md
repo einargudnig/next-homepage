@@ -14,7 +14,7 @@ It can always be quite frusterating and hard to generate a well sounding git mes
 ![https://res.cloudinary.com/dik9usnqz/image/upload/v1622500611/gitcomment.png](https://res.cloudinary.com/dik9usnqz/image/upload/v1622500611/gitcomment.png)
 More [here](http://www.commitlogsfromlastnight.com/)
 
-Don't take me wrong, this is fun and sometimes you just 'went' through your commit messages.
+Don't take me wrong, this is fun and sometimes you just express your feelings through your commit messages.
 
 But that is not very describing. [Here](https://www.conventionalcommits.org/en/v1.0.0-beta.2/) is a way that does describe what kind of commit this is by using these pre-determined words: "fix", "chore", "wip", etc.
 
