@@ -11,7 +11,7 @@ author:
 
 It can always be quite frusterating and hard to generate a well sounding git messages. It depends on what you are commiting, but the commit can take a turn to the bad side.
 
-![](<[https://res.cloudinary.com/dik9usnqz/image/upload/v1622500611/gitcomment.png](https://res.cloudinary.com/dik9usnqz/image/upload/v1622500611/gitcomment.png)>)
+![https://res.cloudinary.com/dik9usnqz/image/upload/v1622500611/gitcomment.png](https://res.cloudinary.com/dik9usnqz/image/upload/v1622500611/gitcomment.png)
 More [here](http://www.commitlogsfromlastnight.com/)
 
 Don't take me wrong, this is fun and sometimes you just 'went' through your commit messages.
