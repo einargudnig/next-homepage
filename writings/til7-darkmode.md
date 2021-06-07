@@ -1,6 +1,6 @@
 ---
 title: "TIL7 - Dark Mode"
-date: ""
+date: "2021-06-06"
 og:
   description: "Design a good looking dark mode"
   image: ""
