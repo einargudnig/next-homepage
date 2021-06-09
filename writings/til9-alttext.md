@@ -1,0 +1,20 @@
+---
+title: "TIL9 - Alt img text"
+date: "2021-06-09"
+og:
+  description: "How to write good alt text"
+  image: ""
+author:
+  twitter: "einargudni"
+  name: "Einar Guðni"
+---
+
+[Alt text on images](https://dev.to/arshadayvid/how-to-write-good-alt-text-for-your-images-1f78).
+
+This is a well-informed article on a 'minor' thing, which I and probably others, do not take things like alt image text too seriously.
+
+- Always use an Alt text.
+- Don't use "image of" or "graphic of"
+- Be Accurate
+
+These are just a couple of things mentioned there and in my opinion, it is important to do these things correctly because they serve a very important role. Accessibility is something we should be more serious about.
