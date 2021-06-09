@@ -1,5 +1,5 @@
 ---
-title: "TIL7 - Dark Mode"
+title: "TIL#7 - Dark Mode"
 date: "2021-06-07"
 og:
   description: "Design a good looking dark mode"
