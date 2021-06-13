@@ -1,0 +1,23 @@
+---
+title: "TIL#13 - 30 seconds of code"
+date: "2021-06-13"
+og:
+  description: "Code snippets"
+  image: ""
+author:
+  twitter: "einargudni"
+  name: "Einar Guðni"
+---
+
+Various [code snippets](https://www.30secondsofcode.org/) you can use for your development needs.
+
+You can find a code snippet for your development process on using:
+
+- Javascript
+- React Hooks
+- CSS
+- Git
+
+And more!
+
+This is an easy way to find helpful code snippets for various scenarios all in the same place.
