@@ -1,5 +1,5 @@
 ---
-title: "TIL#13 - React Mental Models v2 "
+title: "TIL#12 - React Mental Models v2 "
 date: "2021-06-12"
 og:
   description: "More about mental models for react"
