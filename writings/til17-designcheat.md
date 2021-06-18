@@ -2,7 +2,7 @@
 title: "TIL#17 - Cheating at design"
 date: "2021-06-17"
 og:
-  description: "Tips for cheating at design
+  description: "Tips for cheating at design"
   image: ""
 author:
   twitter: "einargudni"
