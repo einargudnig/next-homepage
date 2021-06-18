@@ -2,7 +2,7 @@
 title: "TIL#18 - useEffect"
 date: "2021-06-18"
 og:
-  description: "Build Netflix and learn React"
+  description: "Deep dive on useEffect"
   image: ""
 author:
   twitter: "einargudni"
